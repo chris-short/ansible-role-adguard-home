@@ -1,0 +1,30 @@
+---
+- name: Verify
+  hosts: all
+  vars:
+    inspec_bin: /opt/inspec/bin/inspec
+    inspec_download_source_dir: /usr/local/src
+    inspec_test_directory: /tmp/molecule/inspec
+  tasks:
+    - name: Register test files
+      local_action: command find . -name 'test_*.rb'
+      register: test_files
+      become: false
+
+    - name: Execute Inspec tests
+      # local_action: command inspec exec "{{ item }}" --host {{ inventory_hostname }}
+      local_action: command inspec exec -b docker --host {{ inventory_hostname }} "{{ item }}"
+      register: test_results
+      with_items: "{{ test_files.stdout_lines }}"
+      ignore_errors: true
+
+    - name: Display details about the Inspec results
+      debug:
+        msg: "{{ item.stdout_lines }}"
+      with_items: "{{ test_results.results }}"
+
+    - name: Fail when tests fail
+      fail:
+        msg: "Inspec failed to validate"
+      when: item.rc != 0
+      with_items: "{{ test_results.results }}"

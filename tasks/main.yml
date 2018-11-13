@@ -1,0 +1,44 @@
+---
+# https://github.com/AdguardTeam/AdGuardHome
+
+- name: Download AdGuard Home
+  unarchive:
+    src: "{{agh_url}}"
+    dest: /tmp/
+    remote_src: true
+  tags:
+    - adguard-install
+
+- name: Copy AdGuard Home Binary
+  copy:
+    dest: /usr/local/bin/AdGuardHome
+    src: /tmp/AdGuardHome/AdGuardHome
+    owner: root
+    group: root
+    mode: 0750
+    remote_src: true
+  notify: restart adguardhome
+  tags:
+    - adguard-install
+
+- name: AdGuard systemd unit file
+  template:
+    src: adguardhome.service.j2
+    dest: /etc/systemd/system/adguardhome.service
+  notify: restart adguardhome
+  tags:
+    - blocklist
+    - blacklist
+    - whitelist
+    - filter
+
+- name: Deploy AdGuard Configuration
+  template:
+    src: AdGuardHome.yaml.j2
+    dest: /usr/local/bin/AdGuardHome.yaml
+  notify: restart adguardhome
+  tags:
+    - blocklist
+    - blacklist
+    - whitelist
+    - filter

@@ -1,0 +1,68 @@
+bind_host: ""
+bind_port: {{ agh_bind_port }}
+auth_name: ""
+auth_pass: ""
+coredns:
+  port: {{ coredns_port }}
+  protection_enabled: true
+  filtering_enabled: true
+  safebrowsing_enabled: true
+  safesearch_enabled: false
+  parental_enabled: false
+  parental_sensitivity: 13
+  blocked_response_ttl: 30
+  querylog_enabled: true
+  upstream_dns:
+{% for ip in upstream_servers %}
+  - tls://{{ ip }}
+{% endfor %}
+filters:
+- url: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
+  name: AdGuard Simplified Domain Names filter
+  enabled: true
+- url: https://adaway.org/hosts.txt
+  name: AdAway
+  enabled: false
+- url: https://hosts-file.net/ad_servers.txt
+  name: hpHosts - Ad and Tracking servers only
+  enabled: false
+- url: http://www.malwaredomainlist.com/hostslist/hosts.txt
+  name: MalwareDomainList.com Hosts List
+  enabled: true
+- url: https://tspprs.com/dl/cl1
+  name: Block List Project — CL1
+  enabled: false
+- url: https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt
+  name: crazy-max/WindowsSpyBlocker
+  enabled: true
+- url: https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV.txt
+  name: Perflyst/PiHoleBlocklist — Smart TV
+  enabled: true
+- url: https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/android-tracking.txt
+  name: Perflyst/PiHoleBlocklist — Android Tracking
+  enabled: true
+- url: https://zerodot1.gitlab.io/CoinBlockerLists/hosts
+  name: CoinBlockerLists
+  enabled: true
+- url: https://zeustracker.abuse.ch/blocklist.php?download=domainblocklist
+  name: abuse.ch ZeuS domain blocklist
+  enabled: true
+- url: https://www.dshield.org/feeds/suspiciousdomains_Low.txt
+  name: DShield.org Suspicious Domain List
+  enabled: true
+- url: https://www.fanboy.co.nz/fanboy-problematic-sites.txt
+  name: Fanboy's problematic-sites
+  enabled: true
+- url: https://easylist-downloads.adblockplus.org/fanboy-annoyance.txt
+  name: Fanboy's Annoyance List
+  enabled: true
+- url: https://raw.githubusercontent.com/r4vi/block-the-eu-cookie-shit-list/master/filterlist.txt
+  name: Block-EU-Cookie-Shit-List
+  enabled: true
+user_rules:
+{% for domain in adguard_home_allow %}
+- '@@||{{ domain }}^'
+{% endfor %}
+{% for domain in adguard_home_deny %}
+- '||{{ domain }}^'
+{% endfor %}

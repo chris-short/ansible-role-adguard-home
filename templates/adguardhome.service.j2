@@ -1,0 +1,13 @@
+# {{ ansible_managed }}
+
+[Unit]
+Description=AdGuard Home DNS Service
+After=syslog.target
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/AdGuardHome
+ExecReload=/bin/kill -HUP $MAINPID
+
+[Install]
+WantedBy=multi-user.target

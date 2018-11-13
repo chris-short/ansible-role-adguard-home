@@ -1,0 +1,34 @@
+---
+# https://github.com/AdguardTeam/AdGuardHome/releases
+agh_url: https://github.com/AdguardTeam/AdGuardHome/releases/download/v0.9-hotfix1/AdGuardHome_v0.9-hotfix1_linux_arm.tar.gz
+
+coredns_port: 53
+agh_bind_port: 3000
+
+# tls is hard coded in the template atm for ease of use
+upstream_servers:
+  - 1.1.1.1
+  - 8.8.8.8
+  - 1.0.0.1
+
+adguard_home_allow:
+  - ansible.com
+  - redhat.com
+  - ibm.com
+  - chrisshort.net
+  - devopsish.com
+  - mailchimp.com
+  - delta.com
+  - egencia.com
+  - asana.com
+  - tkqlhce.com
+  - ftjcfx.com
+  - eloqua.com
+
+adguard_home_deny:
+  - foxnews.com
+  - scorecardresearch.com
+  - omtrdc.net
+  - imrworldwide.com
+  - bugsnag.com
+  - js-agent.newrelic.com

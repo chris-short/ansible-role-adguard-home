@@ -1,0 +1,6 @@
+---
+- name: restart adguardhome
+  service:
+    name: adguardhome
+    enabled: true
+    state: reloaded
