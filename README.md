@@ -1,7 +1,7 @@
 Role Name
 =========
 
-This role will install AdGuard Home () on target system(s).
+This Ansible Role will install AdGuard Home ([https://github.com/AdguardTeam/AdGuardHome](https://github.com/AdguardTeam/AdGuardHome)) on target system(s).
 
 Requirements
 ------------
@@ -55,6 +55,6 @@ MIT
 Author Information
 ------------------
 
-Chris Short
-chris@chrisshort.net
+Chris Short  
+chris@chrisshort.net  
 https://chrisshort.net/
