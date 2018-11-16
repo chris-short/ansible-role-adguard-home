@@ -3,7 +3,7 @@
 
 - name: Download AdGuard Home
   unarchive:
-    src: "{{agh_url}}"
+    src: "{{ agh_url }}"
     dest: /tmp/
     remote_src: true
   tags:
