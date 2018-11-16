@@ -3,4 +3,4 @@
   service:
     name: adguardhome
     enabled: true
-    state: reloaded
+    state: restarted
