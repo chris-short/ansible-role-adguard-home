@@ -22,15 +22,15 @@ Role Variables
 
 agh_url: The URL of the AdGuard Home tarball. Can be found at https://github.com/AdguardTeam/AdGuardHome/releases
 
-coredns_port: This is the port the DNS server will listen on
+`coredns_port`: This is the port the DNS server will listen on
 
-agh_bind_port: This is the port the AdGuard Home UI is made available
+`agh_bind_port`: This is the port the AdGuard Home UI is made available
 
-upstream_servers: A dict of upstream DNS resolvers to use. TLS is hard coded in the AdGuardHome.yaml template for ease of use.
+`upstream_servers`: A dict of upstream DNS resolvers to use. TLS is hard coded in the AdGuardHome.yaml template for ease of use.
 
-adguard_home_allow: Domains (and subdomains) to explicitly allow
+`adguard_home_allow`: Domains (and subdomains) to explicitly allow
 
-adguard_home_deny: Domains (and subdomains) to explicitly block
+`adguard_home_deny`: Domains (and subdomains) to explicitly block
 
 Dependencies
 ------------
@@ -45,7 +45,7 @@ passed in as parameters) is always nice for users too:
 
     - hosts: servers
       roles:
-         - role: chris-short.adguard-home
+         - role: chris-short.ansible_role_adguard_home
 
 License
 -------
