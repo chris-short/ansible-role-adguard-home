@@ -24,7 +24,7 @@ adguard_home_allow:
   - tkqlhce.com
   - ftjcfx.com
   - eloqua.com
-  - ecdinterface.philips.com
+  - philips.com
 
 adguard_home_deny:
   - foxnews.com

@@ -41,6 +41,10 @@ galaxy_info:
     # - name: Raspbian
     #   versions:
     #     - all
+    - name: Debian
+      versions:
+        - 9
+        - 8
 
     - name: EL
       versions:
