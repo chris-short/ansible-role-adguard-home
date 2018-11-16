@@ -33,3 +33,19 @@ adguard_home_deny:
   - imrworldwide.com
   - bugsnag.com
   - js-agent.newrelic.com
+  - acrlog2.samsungcloudsolution.com
+  - addthis.com
+  - adowynel.com
+  - aistcdn.com
+  - icloud-diagnostics.com
+  - icloud-analysis.com
+  - likethatapps.com
+  - likethatdecor.com
+  - likethatpet.com
+  - likethatpets.com
+  - samsungacr.com
+  - samsungads.com
+  - superfish.com
+  - superfish.mobi
+  - superfish.us
+  - testsdomain.info
