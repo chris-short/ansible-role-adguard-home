@@ -38,13 +38,13 @@ galaxy_info:
     #   versions:
     #   - all
     #   - 25
-    - name: Raspbian
-      versions:
-      - all
+    # - name: Raspbian
+    #   versions:
+    #     - all
 
-    - name: CentOS
+    - name: EL
       versions:
-      - 7
+        - 7
 
   galaxy_tags: []
   # List tags for your role here, one per line. A tag is a keyword that describes
