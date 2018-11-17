@@ -13,39 +13,6 @@ upstream_servers:
 
 adguard_home_allow:
   - ansible.com
-  - redhat.com
-  - ibm.com
-  - chrisshort.net
-  - devopsish.com
-  - mailchimp.com
-  - delta.com
-  - egencia.com
-  - asana.com
-  - tkqlhce.com
-  - ftjcfx.com
-  - eloqua.com
-  - philips.com
 
 adguard_home_deny:
   - foxnews.com
-  - scorecardresearch.com
-  - omtrdc.net
-  - imrworldwide.com
-  - bugsnag.com
-  - js-agent.newrelic.com
-  - acrlog2.samsungcloudsolution.com
-  - addthis.com
-  - adowynel.com
-  - aistcdn.com
-  - icloud-diagnostics.com
-  - icloud-analysis.com
-  - likethatapps.com
-  - likethatdecor.com
-  - likethatpet.com
-  - likethatpets.com
-  - samsungacr.com
-  - samsungads.com
-  - superfish.com
-  - superfish.mobi
-  - superfish.us
-  - testsdomain.info
