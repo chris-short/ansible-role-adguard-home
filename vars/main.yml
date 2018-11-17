@@ -22,6 +22,7 @@ adguard_home_allow:
   - ftjcfx.com
   - ibm.com
   - mailchimp.com
+  - padbury.me
   - philips.com
   - redhat.com
   - tkqlhce.com
@@ -46,6 +47,7 @@ adguard_home_deny:
   - samsungacr.com
   - samsungads.com
   - scorecardresearch.com
+  - sessionstack.com
   - superfish.com
   - superfish.mobi
   - superfish.usa
