@@ -43,8 +43,8 @@ galaxy_info:
     #     - all
     - name: Debian
       versions:
-        - 9
-        - 8
+        - stretch
+        - jessie
 
     - name: EL
       versions:
