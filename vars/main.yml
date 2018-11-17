@@ -12,6 +12,7 @@ upstream_servers:
   - 1.0.0.1
 
 adguard_home_allow:
+  - amazon.com
   - ansible.com
   - asana.com
   - chrisshort.net
