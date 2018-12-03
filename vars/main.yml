@@ -1,15 +1,16 @@
 ---
 # https://github.com/AdguardTeam/AdGuardHome/releases
-agh_url: https://github.com/AdguardTeam/AdGuardHome/releases/download/v0.9-hotfix1/AdGuardHome_v0.9-hotfix1_linux_arm.tar.gz
+agh_url: https://github.com/AdguardTeam/AdGuardHome/releases/download/v0.91/AdGuardHome_v0.91_linux_arm64.tar.gz
 
 coredns_port: 53
 agh_bind_port: 3000
 
-# tls is hard coded in the template atm for ease of use
+# https://github.com/AdguardTeam/AdGuardHome/issues/453
 upstream_servers:
-  - 1.1.1.1
-  - 8.8.8.8
-  - 1.0.0.1
+  - https://cloudflare-dns.com/dns-query
+  - tls://1.1.1.1
+  - tls://8.8.8.8
+  - tls://1.0.0.1
 
 adguard_home_allow:
   - amazon.com

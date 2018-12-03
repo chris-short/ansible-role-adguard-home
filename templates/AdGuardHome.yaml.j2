@@ -13,8 +13,8 @@ coredns:
   blocked_response_ttl: 30
   querylog_enabled: true
   upstream_dns:
-{% for ip in upstream_servers %}
-  - tls://{{ ip }}
+{% for id in upstream_servers %}
+  - {{ id }}
 {% endfor %}
 filters:
 - url: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
