@@ -1,6 +1,6 @@
 ---
 # https://github.com/AdguardTeam/AdGuardHome/releases
-agh_url: https://github.com/AdguardTeam/AdGuardHome/releases/download/v0.91/AdGuardHome_v0.91_linux_arm64.tar.gz
+agh_url: https://github.com/AdguardTeam/AdGuardHome/releases/download/v0.91/AdGuardHome_v0.91_linux_arm.tar.gz
 
 coredns_port: 53
 agh_bind_port: 3000
