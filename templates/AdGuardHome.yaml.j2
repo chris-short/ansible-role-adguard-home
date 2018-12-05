@@ -62,6 +62,7 @@ filters:
 user_rules:
 {% for domain in adguard_home_allow %}
 - '@@||{{ domain }}^'
+- 'analytics.twitter.com'
 {% endfor %}
 {% for domain in adguard_home_deny %}
 - '||{{ domain }}^'
