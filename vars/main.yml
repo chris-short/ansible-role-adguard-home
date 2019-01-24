@@ -58,4 +58,4 @@ adguard_home_deny:
   - superfish.usa
   - testsdomain.info
   - walkme.com
-  
+  - s3.amazonaws.com
