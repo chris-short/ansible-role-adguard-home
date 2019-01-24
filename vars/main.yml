@@ -31,6 +31,7 @@ adguard_home_allow:
   - philips.com
   - redhat.com
   - tkqlhce.com
+  - analytics.twitter.com
 
 adguard_home_deny:
   - acrlog2.samsungcloudsolution.com
